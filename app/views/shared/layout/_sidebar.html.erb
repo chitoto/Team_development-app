@@ -34,7 +34,8 @@
               <i class="fa fa-circle-o nav-icon"></i>
               <p>
                 <%= agenda.title %>
-                <i class="right fa fa-angle-left"></i>
+                <i class="fa fa-angle-left"></i>
+                  <object style ="margin-left: 20px;"><%= link_to '削除', agenda_path(agenda.id), method: :delete, class: 'btn btn-sm btn-danger agenda-delete', data: { confirm: "#{agenda.title}を削除しますか？" } %></object>
               </p>
             </a>
             <ul class="nav nav-treeview" style="display: block;">
