@@ -35,7 +35,9 @@
               <p>
                 <%= agenda.title %>
                 <i class="fa fa-angle-left"></i>
+                <% if current_user == agenda.team.owner || current_user == agenda.user %>
                   <object style ="margin-left: 20px;"><%= link_to '削除', agenda_path(agenda.id), method: :delete, class: 'btn btn-sm btn-danger agenda-delete', data: { confirm: "#{agenda.title}を削除しますか？" } %></object>
+                <% end %>
               </p>
             </a>
             <ul class="nav nav-treeview" style="display: block;">
