@@ -48,6 +48,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'rubocop', require:false
+  gem 'rubocop-rails', require:false
 end
 
 group :development do
